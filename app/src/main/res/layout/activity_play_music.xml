@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorListBackground"
+    android:orientation="vertical"
+    android:weightSum="9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/buttonBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/back"
+                android:background="@null"
+                app:tint="@color/colorButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNowPlaying"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/now_playing_background"
+                android:gravity="center"
+                android:text="@string/now_playing"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/playMusicImg"
+            android:layout_width="@dimen/img_side_300dp"
+            android:layout_height="@dimen/img_side_300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/playMusicTextViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:text="@string/music_name"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/playMusicTextViewArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/music_artist"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/play_music_activity_musiccontrol">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/MySeekBar"
+            android:layout_width="@dimen/seekbar_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/playMusicButtonPlay"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSeekbarStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_00_00"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/seekBar"
+            app:layout_constraintEnd_toStartOf="@id/seekBar"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSeekbarEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_00_00"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/seekBar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@id/seekBar" />
+
+        <ImageButton
+            android:id="@+id/playMusicButtonShuffle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/shuffle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/playMusicButtonPrev"
+            app:layout_constraintTop_toBottomOf="@id/seekBar"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/playMusicButtonLoop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/loop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/playMusicButtonNext"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seekBar"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/playMusicButtonPause"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/play_button_background"
+            android:padding="12dp"
+            android:src="@drawable/play"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/playMusicButtonPrev"
+            app:layout_constraintRight_toLeftOf="@id/playMusicButtonNext"
+            app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+        <ImageButton
+            android:id="@+id/playMusicButtonPlay"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/play_button_background"
+            android:padding="12dp"
+            android:src="@drawable/pause"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/playMusicButtonPrev"
+            app:layout_constraintRight_toLeftOf="@id/playMusicButtonNext"
+            app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+        <ImageButton
+            android:id="@+id/playMusicButtonPrev"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:padding="4dp"
+            android:src="@drawable/prev"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/playMusicButtonShuffle"
+            app:layout_constraintRight_toLeftOf="@id/playMusicButtonPlay"
+            app:layout_constraintTop_toBottomOf="@id/seekBar"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/playMusicButtonNext"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:padding="4dp"
+            android:src="@drawable/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/playMusicButtonPlay"
+            app:layout_constraintRight_toLeftOf="@+id/playMusicButtonLoop"
+            app:layout_constraintTop_toBottomOf="@id/seekBar"
+            app:tint="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

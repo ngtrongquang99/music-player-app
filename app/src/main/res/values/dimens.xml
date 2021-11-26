@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_music_item_height">60dp</dimen>
+    <dimen name="list_music_item_image_side">50dp</dimen>
+    <dimen name="list_music_item_image_margin">5dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="nav_view_header_image_side">100dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="edit_text_search_width">250dp</dimen>
+    <dimen name="topMenuHeight">50dp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="img_side_250dp">250dp</dimen>
+    <dimen name="seekbar_width">300dp</dimen>
+    <dimen name="bottom_player_control_height">60dp</dimen>
+    <dimen name="image_view_50dp">50dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="width_50dp">50dp</dimen>
+    <dimen name="img_side_300dp">300dp</dimen>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">music-player-mockproject</string>
+    <string name="music_name">Music Name</string>
+    <string name="singer">Singer</string>
+    <string name="album">Album</string>
+    <string name="ca_s">Ca sĩ</string>
+    <string name="artist">Artist</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="setting">Setting</string>
+    <string name="playlist">Playlist</string>
+    <string name="search">Search</string>
+    <string name="music_artist">Music Artist</string>
+    <string name="_00_00">00:00</string>
+    <string name="other">Other</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="album_name">album name</string>
+    <string name="music_player">Music Player</string>
+    <string name="now_playing">Now playing</string>
+</resources>

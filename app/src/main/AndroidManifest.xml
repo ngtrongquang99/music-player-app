@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gst.tranningcourse.musicplayermockproject">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".service.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Musicplayermockproject">
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PlayMusicActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <receiver
+            android:name="gst.trainingcourse.servicemockproject.broadcast.MyBroadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="0" />
+                <action android:name="1" />
+                <action android:name="2" />
+                <action android:name="3" />
+                <action android:name="4" />
+                <action android:name="5" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>
